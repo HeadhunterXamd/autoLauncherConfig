@@ -1,0 +1,83 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1638293371.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"Applications",
+		"MonitoringFrequency",
+		"PollingFrequency",
+		"RestartDelay"
+	],
+	"properties": {
+		"Applications": {
+			"$id": "#root/Applications", 
+			"title": "Applications", 
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/Applications/items", 
+				"title": "Items", 
+				"type": "object",
+				"required": [
+					"WorkingDirectory",
+					"FunctionCall"
+				],
+				"properties": {
+					"WorkingDirectory": {
+						"$id": "#root/Applications/items/WorkingDirectory", 
+						"title": "Workingdirectory", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"C:/temp"
+						],
+						"pattern": "^.*$"
+					},
+					"FunctionCall": {
+						"$id": "#root/Applications/items/FunctionCall", 
+						"title": "Functioncall", 
+						"type": "string",
+						"default": "",
+						"examples": [
+							"notepad"
+						],
+						"pattern": "^.*$"
+					}
+				}
+			}
+
+		},
+		"MonitoringFrequency": {
+			"$id": "#root/MonitoringFrequency", 
+			"title": "Monitoringfrequency", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"1s"
+			],
+			"pattern": "^.*$"
+		},
+		"PollingFrequency": {
+			"$id": "#root/PollingFrequency", 
+			"title": "Pollingfrequency", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"30s"
+			],
+			"pattern": "^.*$"
+		},
+		"RestartDelay": {
+			"$id": "#root/RestartDelay", 
+			"title": "Restartdelay", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"2s"
+			],
+			"pattern": "^.*$"
+		}
+	}
+}
