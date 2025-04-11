@@ -8,11 +8,7 @@
     "Applications",
     "MonitoringFrequency",
     "PollingFrequency",
-    "RestartDelay",
-    "ShowOutput",
-    "UpdateUrl",
-    "VersionUrl",
-    "Version"
+    "RestartDelay"
   ],
   "properties": {
     "Applications": {
@@ -20,13 +16,17 @@
       "title": "Applications",
       "type": "array",
       "default": [],
-      "items":{
+      "items": {
         "$id": "#root/Applications/items",
         "title": "Items",
         "type": "object",
         "required": [
           "WorkingDirectory",
-          "FunctionCall"
+          "FunctionCall",
+          "ShowOutput",
+          "UpdateUrl",
+          "VersionUrl",
+          "Version"
         ],
         "properties": {
           "WorkingDirectory": {
@@ -47,4 +47,67 @@
             "examples": [
               "notepad"
             ],
-            
+            "pattern": "^.*$"
+          },
+          "ShowOutput": {
+            "$id": "#root/Applications/items/ShowOutput",
+            "title": "ShowOutput",
+            "type": "boolean",
+            "default": false
+          },
+          "UpdateUrl": {
+            "$id": "#root/Applications/items/UpdateUrl",
+            "title": "UpdateUrl",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "VersionUrl": {
+            "$id": "#root/Applications/items/VersionUrl",
+            "title": "VersionUrl",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          },
+          "Version": {
+            "$id": "#root/Applications/items/Version",
+            "title": "Version",
+            "type": "string",
+            "default": "",
+            "pattern": "^.*$"
+          }
+        }
+      }
+    },
+    "MonitoringFrequency": {
+      "$id": "#root/MonitoringFrequency",
+      "title": "Monitoringfrequency",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "1s"
+      ],
+      "pattern": "^.*$"
+    },
+    "PollingFrequency": {
+      "$id": "#root/PollingFrequency",
+      "title": "Pollingfrequency",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "30s"
+      ],
+      "pattern": "^.*$"
+    },
+    "RestartDelay": {
+      "$id": "#root/RestartDelay",
+      "title": "Restartdelay",
+      "type": "string",
+      "default": "",
+      "examples": [
+        "2s"
+      ],
+      "pattern": "^.*$"
+    }
+  }
+}
